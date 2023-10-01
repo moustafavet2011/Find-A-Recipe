@@ -42,7 +42,7 @@ form{
     margin: 20px auto;
 }
 form input{
-    width: 73%;
+    width: 65%;
     background-color: #f6f6b6;
     padding: 10px;
     border-radius: 10px;
@@ -52,7 +52,7 @@ form input{
     outline: none;
 }
 form button{
-    width: 23%;
+    width: 33%;
     padding: 10px 2px;
     color: red;
     background-color: transparent;
@@ -62,13 +62,25 @@ form button{
     cursor: pointer;
 }
 @media(max-width:500px) {
+    form input{
+        width: 60%;
+    }
     form button{
         font-size: 14px;
         padding: 12px 2px;
-        width: 25%;
+        width: 35%;
     }
     }
-
+.container form .error-message{
+    color: red;
+    margin: 10px 0;
+    padding: 10px 10px;
+    border: 1px solid #f6f6b6;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    display: none;
+}
 .results{
     display: grid;
     margin-top: 50px;
@@ -92,39 +104,41 @@ form button{
 .item .recipe-box-2{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
 }
-.item .recipe-box .title{
+.item .recipe-box-1 .title{
     margin: 10px 0;
+    text-align: center;
 }
 .item .recipe-box-1 .view-recipe{
     text-decoration: none;
     color: chocolate;
-    font-size: 18px;
+    font-size: 21px;
     font-weight: bold;
     border: 1px solid chocolate;
     padding: 10px 7px;
-    margin: 20px 0 10px 0;
+    margin: 20px;
     background-color: #fff;
     border-radius: 8px;
-    align-self: flex-start;
+    align-self: center;
     cursor: pointer;
 }
 .item .recipe-box-2 .visit-site{
     text-decoration: none;
     color: #4CAF50;
-    font-size: 18px;
+    font-size: 21px;
     font-weight: bold;
-    border: 1px solid chocolate;
-    padding: 10px 7px;
+    border: 1px solid #4CAF50;
+    padding: 10px;
     margin: 20px 0 10px 0;
     background-color: #fff;
     border-radius: 8px;
-    align-self: flex-start;
+    align-self: center;
 }
 .item .details{
-    position: absolute;
-    top: 68%;
+    position: fixed;
+    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: #fff;
@@ -133,7 +147,8 @@ form button{
     line-height: 1.5;
     margin-top: 50px;
     border-radius: 10px;
-    height: 428px;
+    width: 90%;
+    height: 100%;
     display: none;
 }
 .item .details.show {
@@ -141,6 +156,10 @@ form button{
 }
 .item .details .ingredients{
     padding: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 2;
 }
 .item .details span{
     position: absolute;
@@ -156,4 +175,14 @@ form button{
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
+}
+.item .recipe-box-2 .calories{
+    font-size: 21px;
+    color: #690700;
+}
+@media(max-width: 767px){
+
+    .item .details .ingredients{
+        font-size: 16px;
+    }
 }

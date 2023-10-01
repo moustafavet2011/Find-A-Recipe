@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Application</title>
-    <link rel="stylesheet" href="./Css/main.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,10 +13,11 @@
 <body>
     <section>
         <div class="container">
-            <h1 class="brand">Recipe App</h1>
+            <h1 class="brand">Recettes Finder</h1>
             <form>
                 <input type="text" id="search-item" placeholder="Write your meal here">
-                <button id="search-button">Search <i class="fa fa-search"></i></button>
+                <button id="search-button">Rechercher <i class="fa fa-search"></i></button>
+                <div class="error-message">Aucun résultat trouvé Assurez-vous d’avoir le bon nom de recette</div>
             </form>
             <div class="results">
                 <!-- <div class="item">
@@ -38,6 +39,6 @@
         </div>
     </section>
 
-    <script src="./Js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
